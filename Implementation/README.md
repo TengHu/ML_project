@@ -1,6 +1,7 @@
 1. run get_models.sh to get the CNN caffemodel 
 
 2. setup torch7
+  
   run the following in command:
   
   cd ~/
