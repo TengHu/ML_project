@@ -24,4 +24,4 @@
   
   th neural_style.lua -content_image content_image.jpg -style_image style_image.jpg
 
-WARNING : The program took about an hour on my PC
+WARNING : The program took about an hour on my laptop
