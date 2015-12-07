@@ -223,7 +223,6 @@ function GramMatrix()
 end
 
 
--- Define an nn Module to compute style loss in-place
 local StyleLoss, parent = torch.class('nn.StyleLoss', 'nn.Module')
 
 function StyleLoss:__init(strength, target, normalize)
