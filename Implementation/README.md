@@ -11,9 +11,10 @@
 
 3. Install loadcaffe
   
-run the following in command:
+  run the following in command:
 
   sudo apt-get install libprotobuf-dev protobuf-compiler
+  
   luarocks install loadcaffe
   
 4.  run the following in command:
