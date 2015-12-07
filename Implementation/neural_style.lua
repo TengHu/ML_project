@@ -7,7 +7,7 @@ require 'nn'
 require 'image'
 require 'optim'
 
-local loadcaffe = require 'loadcaffe'
+local loadcaffe_wrap = require 'loadcaffe_wrapper'
 local cmd = torch.CmdLine()
 
 cmd:option('-style_image', 'nil')
@@ -26,8 +26,8 @@ cmd:option('-save_iter', 100)
 cmd:option('-output_image', 'output.png')
 cmd:option('-style_scale', 1.0)
 cmd:option('-pooling', 'max')
-cmd:option('-proto_file', 'VGG_ILSVRC_19_layers_deploy.prototxt')
-cmd:option('-model_file', 'VGG_ILSVRC_19_layers.caffemodel')
+cmd:option('-proto_file', 'models/VGG_ILSVRC_19_layers_deploy.prototxt')
+cmd:option('-model_file', 'models/VGG_ILSVRC_19_layers.caffemodel')
 cmd:option('-backend', 'nn-cpu')
 cmd:option('-seed', -1)
 cmd:option('-content_layers', 'relu4_2')
@@ -38,7 +38,7 @@ function nn.SpatialConvolutionMM:accGradParameters()
 end
 
 local function main(params)  
-  local cnn = loadcaffe.load(params.proto_file, params.model_file, params.backend):float() 
+  local cnn = loadcaffe_wrap.load(params.proto_file, params.model_file, params.backend):float() 
   local content_image = image.load(params.content_image, 3)
   content_image = image.scale(content_image, params.image_size, 'bilinear')
   local content_image_caffe = preprocess(content_image):float()
@@ -111,7 +111,7 @@ local function main(params)
       learningRate = params.learning_rate,
   }
   
-  local function maybe_print(t, loss)
+  local function _print(t, loss)
     local verbose = (params.print_iter > 0 and t % params.print_iter == 0)
     if verbose then
       print(string.format('Iteration %d / %d', t, params.num_iterations))
@@ -153,6 +153,7 @@ local function main(params)
     for _, mod in ipairs(style_losses) do
       loss = loss + mod.loss
     end
+    _print(num_calls, loss)
     save(num_calls)
     collectgarbage()
     return loss, grad:view(grad:nElement())

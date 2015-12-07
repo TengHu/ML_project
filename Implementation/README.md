@@ -1,4 +1,4 @@
-1. run get_models.sh to get the CNN caffemodel 
+1. run models/get_models.sh to get the CNN caffemodel 
 
 2. setup torch7
   
@@ -23,3 +23,5 @@
 4.  run the following in command:
   
   th neural_style.lua -content_image content_image.jpg -style_image style_image.jpg
+
+WARNING : The program took about an hour on my PC
