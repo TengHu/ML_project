@@ -1,3 +1,5 @@
+To run the DEMO:
+
 1. run models/get_models.sh to get the CNN caffemodel 
 
 2. setup torch7
