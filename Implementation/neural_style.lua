@@ -7,7 +7,7 @@ require 'nn'
 require 'image'
 require 'optim'
 
-local loadcaffe_wrap = require 'loadcaffe_wrapper'
+local loadcaffe = require 'loadcaffe'
 local cmd = torch.CmdLine()
 
 cmd:option('-style_image', 'nil')
@@ -38,7 +38,7 @@ function nn.SpatialConvolutionMM:accGradParameters()
 end
 
 local function main(params)  
-  local cnn = loadcaffe_wrap.load(params.proto_file, params.model_file, params.backend):float() 
+  local cnn = loadcaffe.load(params.proto_file, params.model_file, params.backend):float() 
   local content_image = image.load(params.content_image, 3)
   content_image = image.scale(content_image, params.image_size, 'bilinear')
   local content_image_caffe = preprocess(content_image):float()
