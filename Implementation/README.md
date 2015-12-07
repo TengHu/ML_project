@@ -18,4 +18,4 @@ run the following in command:
   
 4.  run the following in command:
   
-th neural_style.lua -content_image content_image.jpg -style_image style_image.jpg
+  th neural_style.lua -content_image content_image.jpg -style_image style_image.jpg
