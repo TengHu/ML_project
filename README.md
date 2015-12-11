@@ -1,23 +1,7 @@
-# ML_project
-This is the project report for Machine Learning class. 
+Reported will be uploaded on December 11st.
 
-Team member: Teng Hu, ChengEn Xie
+Sorry for the inconvenience.
 
-abstract:
-
-summary of paper(how we did)
- what is CNN:
- 
- how we use the cnn:
- 
- 
- why it works:
-
-how we modify
-:
-Implementation
-
-Further improvement and application
 
 
 
