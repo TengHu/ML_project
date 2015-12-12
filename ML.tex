@@ -42,24 +42,47 @@ In addition, we tweak the model by implement new layers of learning network, ana
 Convolutional neural network is designed to take advantage of the 2D structure of images. CNN consists of a number of convolutional layers and follow by one or more fully connected layers as in standard multilayer neural network. One major benefit is CNN is easier to train and have fewer parameters than fully connected networks with the same number of hidden units.	
 
 The model in the paper is using VGG Network. The model use a publicly available package call caffe-network. p is the original image, and x is the generated image, l is the layer. In each layer in CNN, x is encoded by the filter. The squared-error can be written as following:
+\begin{center}
+$L_{content}(\vec{p},\vec{x},l)=\frac{1}{2}\sum_{i,j}(F^l_{ij}-P^l_{ij})^2$
+\end{center}
 
 
 It can be derived as:
+\begin{center}
+$\frac{\partial L_{content}}{\partial F^l_{ij}}=\left\{
+    \begin{array}{lr}
+     (F^l-P^l)_{ij} & if F^l_{ij}>0\\
+     0 & if F^l_{ij}<0
+     \end{array}
+    \right.$
+\end{center}
 
 
 
 The input x will change until it converge in the output in a certain layer of the CNN as p. The model also computes the correlation between different filter response above CNN in each layer. As represented by:
+\begin{center}
+$G^l_{ij}=\sum_{k}F^l_{ik}F^l_{jk}$
+\end{center}
 
 
 
 To generate texture, the model uses gradient descent from white noise.
 In order to mix the image with art style, the model will minimize the distance of a white noise image to match the art style. The total loss of the layer and the total loss is 
+\begin{center}
+$E_l=\frac{1}{4N^2_lM^2_l}\sum_{ij}(G^l_{ij}-A^l_{ij})^2$
+\end{center}
+\begin{center}
+$L_{style}(\vec{\alpha},\vec{x})=\sum_{l=0}^{L}w_lE_l$
+\end{center}
 
 
 
 
 
 To generate the image using the texture the model minimizes the loss function of distance of white noise of the picture and the style from different CNN layers.
+\begin{center}
+$L_{total}(\vec{p},\vec{\alpha},\vec{x})=\alpha L_{content}(\vec{p},\vec{x})+\beta L_{style}(\vec{\alpha},\vec{x})$
+\end{center}
 \begin{onehalfspace}
 \section{Image Process Result}
 \end{onehalfspace}
@@ -67,7 +90,12 @@ To generate the image using the texture the model minimizes the loss function of
 \begin{onehalfspace}
 In our project we studied and implemented the model in A Neural Algorithm of Artistic Style, using Torch 7 and VGG-network model in caffe.
 
-\includegraphics{iter_100.png}
+\begin{figure}
+    \includegraphics[width=0.5\textwidth,left]{out3}
+    \includegraphics{width=1\textwidth, right]{shipwreck}
+    
+\end{figure}
+
 \end{onehalfspace}
 
 
