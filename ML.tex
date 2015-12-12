@@ -25,9 +25,9 @@
 \end{onehalfspace}
 
 \begin{onehalfspace}
-Defining a specific artistic style has been a controversial topic in both arts and neural science field.  In the paper A Neural Algorithm of Artistic Style. The authors introduce a approach  by using  an artificial system with deep neural network to applied existing art style from a input painting into a new painting.
+Defining a specific artistic style has been a controversial topic in both arts and neural science field.  In the paper \textit{A Neural Algorithm of Artistic Style}. The authors introduce a approach  by using  an artificial system with deep neural network to applied existing art style from a input painting into a new painting.
 
-Our approach is to learn and implement the idea behind the paper and replicates the output. The algorithm captures the style information within different layers of the network, then construct the image that matches the style representation of the given input image. Initially we are planning to use Python to implement the algorithms and utilizing Caffe package to implement the convolution learning network. 
+Our approach is to learn and implement the idea behind the paper and replicates the output. The algorithm captures the style information within different layers of the network, then construct the image that matches the style representation of the given input image. Initially we are planning to implement the algorithms and utilizing Caffe package to implement the convolution learning network. 
 
 In addition, we tweak the model by implement new layers of learning network, analyze the correspondence between different loss functions and texture representation. 
 \end{onehalfspace}
@@ -41,7 +41,7 @@ In addition, we tweak the model by implement new layers of learning network, ana
 \begin{onehalfspace}
 Convolutional neural network is designed to take advantage of the 2D structure of images. CNN consists of a number of convolutional layers and follow by one or more fully connected layers as in standard multilayer neural network. One major benefit is CNN is easier to train and have fewer parameters than fully connected networks with the same number of hidden units.	
 
-The model in the paper is using VGG Network. The model use a publicly available package call caffe-network. p is the original image, and x is the generated image, l is the layer. In each layer in CNN, x is encoded by the filter. The squared-error can be written as following:
+The model in the paper is using VGG Network. It noted that p is the original image, and x is the generated image, l is the layer. In each layer in CNN, x is encoded by the filter. The squared-error can be written as following:
 \begin{center}
 $L_{content}(\vec{p},\vec{x},l)=\frac{1}{2}\sum_{i,j}(F^l_{ij}-P^l_{ij})^2$
 \end{center}
@@ -76,13 +76,16 @@ $L_{style}(\vec{\alpha},\vec{x})=\sum_{l=0}^{L}w_lE_l$
 \end{center}
 
 
-
+\includegraphics[width = \textwidth]{image3}
 
 
 To generate the image using the texture the model minimizes the loss function of distance of white noise of the picture and the style from different CNN layers.
 \begin{center}
 $L_{total}(\vec{p},\vec{\alpha},\vec{x})=\alpha L_{content}(\vec{p},\vec{x})+\beta L_{style}(\vec{\alpha},\vec{x})$
 \end{center}
+
+\end{onehalfspace}
+
 \begin{onehalfspace}
 \section{Image Process Result}
 \end{onehalfspace}
@@ -90,13 +93,8 @@ $L_{total}(\vec{p},\vec{\alpha},\vec{x})=\alpha L_{content}(\vec{p},\vec{x})+\be
 \begin{onehalfspace}
 In our project we studied and implemented the model in A Neural Algorithm of Artistic Style, using Torch 7 and VGG-network model in caffe.
 
-\begin{figure}
-    \includegraphics[width=0.5\textwidth,left]{out3}
-    \includegraphics{width=1\textwidth, right]{shipwreck}
-    
-\end{figure}
 
-\end{onehalfspace}
+
 
 
 
@@ -111,4 +109,27 @@ In our project we studied and implemented the model in A Neural Algorithm of Art
 It is well-known that Convolutional Neural Networks are very powerful in Image Processing and already have many interesting applications. The reasons lie in the structure of CNN. Convolutional Neural Networks consist of layers of computational units that process information through feedforward propagation. Each layer of units is a collection of image filters and extracts a different feature of the image. In this paper, the major finding is that the representations of content and style in CNN 
 can be separable in layers to some extent, thus we can extract the style of the picture and use it to produce new one combined with other content. In brief, the content of the image we are looking at is referred to positions and arrangement of objects which are stored in high level layers when CNN is trained for object recognition, for the same reason, we can recognize these output images originates from one same image, because our brain recognizes the object unconsciously. On the other hand, the algorithm uses a feature space to store texture information. The feature space consists of correlations between the different filter responses in each layer of network. We extract the style of image by including feature correlations of multiple layers.
 \end{onehalfspace}
+
+
+\begin{thebibliography}{9}
+\bibitem{1} 
+Simonyan, K. and Zisserman, A.
+Very Deep Convolutional Networks for Large-Scale Image Recognition,CoRR, abs/1409.1556, 
+ 
+ \bibitem{2} 
+Leon A. Gatys, Alexander S. Ecker, Matthias Bethge
+A Neural Algorithm of Artistic Style
+
+\bibitem{2} 
+neural-style
+\\\texttt{https://github.com/jcjohnson/neural-style}
+
+\bibitem{2} 
+CNN image
+\\\texttt{http://deeplearning.net/tutorial/_images/mylenet.png}
+
+
+\end{thebibliography}
+\end{onehalfspace}
 \end{document}
+
