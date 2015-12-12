@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  11 DEC 2015 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  11 DEC 2015 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -244,69 +244,107 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<image3.png, id=11, 544.1931pt x 127.1952pt>
-File: image3.png Graphic file (type png)
- <use image3.png>
-Package pdftex.def Info: image3.png used on input line 79.
-(pdftex.def)             Requested size: 345.0pt x 80.63802pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 79--80
-[][] 
- []
-
-[2 <./image3.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 125.
-
- (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-./ML.tex:129: Missing $ inserted.
-<inserted text> 
-                $
-l.129 ...earning.net/tutorial/_images/mylenet.png}
-                                                  
-? 
-./ML.tex:129: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.129 ...earning.net/tutorial/_images/mylenet.png}
-                                                  
-? 
-./ML.tex:130: Missing $ inserted.
-<inserted text> 
-                $
-l.130 
-      
-? 
-./ML.tex:130: Missing } inserted.
-<inserted text> 
-                }
-l.130 
-      
-? 
-./ML.tex:133: Extra \endgroup.
-\restore@spacing ...vskip \baselineskip \endgroup 
-                                                  \vskip -\parskip \vskip -\...
-l.133 \end{onehalfspace}
-                        
-? 
-
-./ML.tex:133: LaTeX Error: \begin{document} ended by \end{onehalfspace}.
+./ML.tex:46: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 \end{onehalfspace}
-                        
+l.46 \newline
+             
 ? 
-./ML.tex:133: Extra \endgroup.
+<image3.png, id=11, 544.1931pt x 127.1952pt>
+File: image3.png Graphic file (type png)
+ <use image3.png>
+Package pdftex.def Info: image3.png used on input line 47.
+(pdftex.def)             Requested size: 345.0pt x 80.63802pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 47--49
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
+[2 <./image3.png>]
+./ML.tex:99: Extra \endgroup.
+\restore@spacing ...vskip \baselineskip \endgroup 
+                                                  \vskip -\parskip \vskip -\...
+l.99 \end{onehalfspace}
+                       
+? 
+
+./ML.tex:99: LaTeX Error: \begin{document} ended by \end{onehalfspace}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 \end{onehalfspace}
+                       
+? 
+./ML.tex:99: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.133 \end{onehalfspace}
+l.99 \end{onehalfspace}
+                       
+? 
+[3]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 155.
+
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+./ML.tex:159: Missing $ inserted.
+<inserted text> 
+                $
+l.159 ...earning.net/tutorial/_images/mylenet.png}
+                                                  
+? 
+./ML.tex:159: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.159 ...earning.net/tutorial/_images/mylenet.png}
+                                                  
+? 
+./ML.tex:160: Missing $ inserted.
+<inserted text> 
+                $
+l.160 
+      
+? 
+./ML.tex:160: Missing } inserted.
+<inserted text> 
+                }
+l.160 
+      
+? 
+./ML.tex:163: Extra \endgroup.
+\restore@spacing ...vskip \baselineskip \endgroup 
+                                                  \vskip -\parskip \vskip -\...
+l.163 \end{onehalfspace}
                         
 ? 
-[3] (./ML.aux)
+
+./ML.tex:163: LaTeX Error: \begin{document} ended by \end{onehalfspace}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \end{onehalfspace}
+                        
+? 
+./ML.tex:163: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.163 \end{onehalfspace}
+                        
+? 
+[4] (./ML.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -318,7 +356,7 @@ Here is how much of TeX's memory you used:
  6458 multiletter control sequences out of 15000+600000
  14821 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,26p,763b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,26p,763b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -334,10 +372,10 @@ ve/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
 014/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2014/
 texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on ML.pdf (3 pages, 220891 bytes).
+Output written on ML.pdf (4 pages, 231704 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
