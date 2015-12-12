@@ -1,13 +1,5 @@
-Report will be uploaded on December 11st.
+#CS571 Machine Learning 
 
-Sorry for the inconvenience.
-
-
-
-
-
-
-
-
-
+* Title: Image Processing using Convolutional Neural
+* Team member: Teng Hu, Chengen Xie
 
